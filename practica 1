@@ -1,0 +1,186 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                    MENU SIN COMPLETAR EL "SWITCH"
+                                                        --------------------*ACABADO*--------------------
+                                                                         "NO HAY LINKS"
+                                                        -------------------------------------------------
+import java.util.Scanner;	//importamos la clase sccanner
+
+public class sergio {
+
+	public static void main(String[] args) {
+Scanner teclado = new Scanner( System.in );
+
+		{
+			int eleccion;	//variable de la eleccion
+      
+   System.out.println("==================\r\n"
+   		+ "== OFICINA v1.0 ==\r\n"
+   		+ "==================\r\n"
+   		+ "");
+      
+   System.out.println("¿Que desea hacer?: \r\n"
+   		+ "");	//ENSEÑAMOS EL MENU CON LA OPCIONES
+   System.out.println("1. Reloj"); 
+   System.out.println("2. Correo Electronico");
+   System.out.println("3. Calculadora");
+   System.out.println("4. Salir del programa");
+   System.out.print("Deseo la opcion: ");
+    eleccion = teclado.nextInt();	//PETICION DE LA ELECCION
+    
+    System.out.println("------------------/Resultado de su eleccion/------------------");	
+    		
+   switch(eleccion){
+   case 1:
+
+       break;
+   case 2:
+       
+   break;
+   case 3:
+       
+     break;
+   case 4:
+	   
+   break;
+   
+   }
+	    }
+
+}}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                              RELOJ
+                                                        --------------------*ACABADO*--------------------
+                                               https://es.stackoverflow.com/questions/208922/como-mostrar-hora-actual-en-java
+                                                        -------------------------------------------------
+
+//impotamos la clase LocalDate
+import java.time.LocalDateTime;
+
+public class reloj {
+
+	public static void main(String[] args) {
+		LocalDateTime locaDate = LocalDateTime.now(); //usamos la clase LocalDate
+		int hours  = locaDate.getHour();	 //variable para obtener las horas
+		int minutes = locaDate.getMinute(); 	//variable para obtener los minutos
+		System.out.println("Hora actual es : " + hours  + ":"+ minutes); //Para representar por pantalla
+		
+	}
+
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                              CORREO
+                                                       --------------------*PENDIENTE*-------------------
+                                                                          "NO HAY LINKS"
+                                                        -------------------------------------------------
+import java.util.Scanner;
+public class correo1 {
+	static Scanner teclado = new Scanner( System.in );
+	public static void main(String[] args) {
+		//VARIABLES
+		String para;
+		String Asunto;
+		String Cuerpo;
+		String eleccion;
+		//PETICION DE DATOS AL USUARIO PARA ENVIAR UN CORREO
+	System.out.print("Para: ");
+	para = teclado.nextLine();
+	System.out.print("Asunto: ");
+	Asunto = teclado.nextLine();
+	System.out.print("Cuerpo: ");
+	Cuerpo = teclado.nextLine();
+		//PREGUNTAMOS SI ESTA SEGURO DE ENVIAR EL CORREO
+	System.out.println("Seguro que quieres enviar el correo electronico? s/n");
+	eleccion = teclado.nextLine();
+	
+	if(eleccion=="s")
+		{
+		System.out.println("Para:"+para);
+		System.out.println("Asunto:"+Asunto);
+		System.out.println("Cuerpo:"+Cuerpo);
+	}
+	else
+	{
+	System.out.println("Envio Cancelado");
+	}
+	
+	
+	
+	}
+
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                           CALCULADORA
+                                                        -------------------*PENDIENTE*-------------------
+                                                                          "NO HAY LINKS"
+                                                        -------------------------------------------------
+import java.util.Scanner;
+public class calculadora {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner( System.in );
+		int a = 0;
+		int b = 0;
+		
+		int eleccion;
+		System.out.print("=================\r\n"
+				+ "== CALCULADORA ==\r\n"
+				+ "=================\r\n"
+				+ "");
+		 System.out.println("¿Que desea hacer?: \r\n"
+			   		+ "");	//ENSEÑAMOS EL MENU CON LA OPCIONES
+			   System.out.println("1. Suma"); 
+			   System.out.println("2. Resta");
+			   System.out.println("3. Multiplicacion");
+			   System.out.println("4. Division");
+			   System.out.println("5. Modulo");
+			   System.out.println("5. Potencia");
+			   System.out.println("5. Raiz Cuadrada");
+			   System.out.println("5. Generar un número aleatorio (entre 1 a 1000)");
+			   System.out.println("5. Calcular longitud de una circunferencia (L = 2*PI*r)\r\n"
+			   		+ "");
+			   eleccion = teclado.nextInt();
+			   switch(eleccion){
+			   case 1:
+				   System.out.println("---------------------------------Calculadora Suma---------------------------------");
+				   System.out.print("Ingresa el primer dato: ");
+				   a =teclado.nextInt();
+				   System.out.print("Ingresa el segundo dato: ");
+				   b =teclado.nextInt();
+				   System.out.println("La suma de "+a+" + "+b+" = "+ (a+b));
+			       break;
+			   case 2:
+				   System.out.println("---------------------------------Calculadora Resta---------------------------------");
+				   System.out.print("Ingresa el primer dato: ");
+				   a =teclado.nextInt();
+				   System.out.print("Ingresa el segundo dato: ");
+				   b =teclado.nextInt();
+				   System.out.println("La resta de "+a+" - "+b+" = "+ (a-b));
+				   break;
+			   case 3:
+				   System.out.println("---------------------------------Calculadora Multipliacion---------------------------------");
+				   System.out.print("Ingresa el primer dato: ");
+				   a =teclado.nextInt();
+				   System.out.print("Ingresa el segundo dato: ");
+				   b =teclado.nextInt();
+				   System.out.println("La multiplicacion de "+a+" x "+b+" = "+ (a*b));
+				   break;
+			   case 4:
+				   System.out.println("---------------------------------Calculadora Division---------------------------------");
+				   System.out.print("Ingresa el primer dato: ");
+				   a =teclado.nextInt();
+				   System.out.print("Ingresa el segundo dato: ");
+				   b =teclado.nextInt();
+				   System.out.println("La division de "+a+" / "+b+" = "+ (a/b));
+				   break;
+			   case 5:
+				   
+				   
+				   break;
+			   
+			   }
+				    }
+
+			}
